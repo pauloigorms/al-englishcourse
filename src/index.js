@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker'
 
 import 'normalize.css'
 import 'bootstrap/dist/css/bootstrap.css'
-import './assets/css/costumer.css'
+import './assets/css/costumer.scss'
 
 ReactDOM.render(
   <React.StrictMode>

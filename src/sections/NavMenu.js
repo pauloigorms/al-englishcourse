@@ -10,13 +10,13 @@ const NavMenu = () => {
     return(
         <>
             <Row className="mt-5">
-                <Col sm="8">
+                <Col sm="8" className="text-left">
                     <img src={short_logo} className="img-logo-menu" alt="logo do menu inicial"/>
                 </Col>
-                <Col sm="2">
+                <Col sm="1">
                     <Dropdown>
-                        <Dropdown.Toggle variant="success" id="dropdown-basic">
-                            HOME
+                        <Dropdown.Toggle id="dropdown-basic">
+                            <b>HOME</b>
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
                             <Dropdown.Item href="#/action-1">NOSSAS MODALIDADES</Dropdown.Item>
@@ -26,8 +26,8 @@ const NavMenu = () => {
                         </Dropdown.Menu>
                     </Dropdown>
                 </Col>
-                <Col sm="2">
-                    <Button variant="outline-light">FAZER MATRÍCULA</Button>{' '}
+                <Col sm="3" className="text-right">
+                    <Button variant="outline-light"><b>FAZER MATRÍCULA</b></Button>{' '}
                 </Col>
             </Row>
         </>
