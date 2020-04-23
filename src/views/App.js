@@ -10,6 +10,7 @@ import SkillsHome from './../sections/SkillsHome.js'
 import FlutuButton from './../components/FlutuButton.js'
 import BigFlutuButton from './../components/BigFlutuButton.js'
 // import NameCourseShadow from './../components/NameCourseShadow.js'
+import CarouselComponent from '../components/CarouselComponent.js'
 
 // Images
 import arrow from './../assets/img/icons/arrow.svg'
@@ -20,6 +21,11 @@ import bag from './../assets/img/icons/work.svg'
 import talk from './../assets/img/icons/talk.svg'
 import insight from './../assets/img/icons/insight.svg'
 import mail from './../assets/img/icons/mail.svg'
+import people from './../assets/img/brands/people.png'
+import teacher from './../assets/img/icons/teacher.svg'
+import heart from './../assets/img/icons/heart.svg'
+import clock from './../assets/img/icons/clock.svg'
+import heart_hand from './../assets/img/icons/heart_hand.svg'
 
 function App() {
   return (
@@ -156,16 +162,15 @@ function App() {
                     </Card>
                   </a>
                 </Col>
-
               </Row>
             </Col>
           </Row>
         </section>
 
         <br /> <br /> <br />
-        <section className="mt-5 mb-5">
+        <section className="mt-5">
           <Row className="mt-5 justify-content-center">
-            <Col sm="11">
+            <Col sm="11" className=" mb-5">
               <Card className="card-ciano card-radius-35 card-no-border">
                 <Card.Body>
                   <Form>
@@ -197,8 +202,97 @@ function App() {
                 </Card.Body>
               </Card>
             </Col>
+            
+            <Col sm="12" className="mt-5 mb-5">
+              <div className="text-center">
+                <h2>
+                  <strong>Pra quem é nossos cursos</strong>
+                  <span className="h-span">?</span>
+                </h2>                
+                <p className="p-white p-medium">
+                  Para os estudantes, profissionais, pessoas com vida calma ou agitada, para quem sabe tudo sobre inglês
+                  ou para pessoas que estão começando agora, para os que amam ou para aqueles que querem melhorar seus currículos profissionais.
+                  <br />É PRA TODOS!
+                </p>
+              </div>
+            </Col>
+
+            <Col sm="8">
+              <img src={people} className="" alt="pessoas conversando" />
+            </Col>
+
+            <Col sm="4" className="text-right">
+              <h2>
+                <strong>A&L English Course</strong>
+                <span className="h-span">.</span>
+              </h2>
+              <h3>
+                <strong>Uma escolha inteligente</strong>
+                <span className="h-span">.</span>
+              </h3>
+              <p className="p-white p-medium">
+              Todo aluno A&L English Course tem condições especiais para estudar
+              </p>
+              <br />
+              <Button variant="light" className="btn-default"><b>QUERO SER UM ALUNO</b></Button>{' '}
+            </Col>
           </Row>
         </section>
+
+        <br /> <br /> <br />
+        <section className="mt-5">
+          <Row>
+            <Col sm="1">
+              <img src={teacher} className="img-teacher img-color-siano mb-1" alt="ícone representando os professores" />
+            </Col>
+            <Col sm="8" className="text-left">
+              <h1><strong>PROFESSORES</strong></h1>
+              <p className="p-white p-medium">
+                Sempre buscamos o melhor para compor nosso time, assim temos certeza de entregarmos um excelente serviço com valor, qualidade e experiência...
+              </p>
+            </Col>
+            <Col sm="12" className="mt-5 mb-5">
+              <CarouselComponent />
+            </Col>
+          </Row>
+        </section>
+
+        <br /> <br /> <br />
+        <section className="mb-5">
+          <Row className="align-items-center">
+            <Col sm="4" className="text-center">
+                  <img src={heart} className="img-menu-category img-color-siano mb-1" alt="ícone de explicação da primeira habilidades" />
+                  <h6>SATISFAÇÃO GARANTIDA</h6>
+                  <p className="p-white p-minium">
+                    Nosso compromisso com a qualidade e aprendizado nos garante inúmeras avaliações positivas.
+                  </p>
+              </Col>
+              <Col sm="4" className="text-center">
+                  <img src={clock} className="img-menu-category img-color-siano mb-1" alt="ícone de explicação da segunda habilidades" />
+                  <h6>CARGA HORÁRIA</h6>
+                  <p className="p-white p-minium">
+                  Nós oferecemos a maior carga horária da região de Manaus.
+                  </p>
+              </Col>
+              <Col sm="4" className="text-center">
+                  <img src={heart_hand} className="img-menu-category img-color-siano mb-1" alt="ícone de explicação da terceira habilidades" />
+                  <h6>LECIONAMOS COM AMOR</h6>
+                  <p className="p-white p-minium">
+                  Nós oferecemos a maior carga horária da região de Manaus.
+                  </p>
+              </Col>
+            <Col sm="12">
+              <h1>
+                <strong>Olha o que alguns dos nossos alunos dizem sobre nós</strong>
+                <span className="h-span">...</span>
+              </h1>
+            </Col>
+            <Col sm="12" className="mt-5 mb-5">
+              <CarouselComponent />
+            </Col>
+          </Row>
+        </section>
+
 
         <FlutuButton />
 
