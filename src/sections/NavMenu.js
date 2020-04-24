@@ -19,10 +19,10 @@ const NavMenu = () => {
                             <b>HOME</b>
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">NOSSAS MODALIDADES</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">NOSSOS ALUNOS</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">PROFESSORES</Dropdown.Item>
-                            <Dropdown.Item href="#/action-4">COMO ME MATRICULO?</Dropdown.Item>
+                            <Dropdown.Item href="#modalidade">NOSSAS MODALIDADES</Dropdown.Item>
+                            <Dropdown.Item href="#comentarios">NOSSOS ALUNOS</Dropdown.Item>
+                            <Dropdown.Item href="#professores">PROFESSORES</Dropdown.Item>
+                            <Dropdown.Item href="#plataforma">COMO ME MATRICULO?</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Col>

@@ -8,10 +8,9 @@ import one from './../assets/img/perfil/teacher/1.jpg'
 class ModalComponent extends React.Component {
 
     constructor(props) {
-        super(props);
-        this.handleShow = this.handleShow.bind(this);
-		this.handleClose = this.handleClose.bind(this);
-
+        super(props)
+        this.handleShow = this.handleShow.bind(this)
+		this.handleClose = this.handleClose.bind(this)
 		this.state = {
             show: false,
             name: ('andreia ferreira').toUpperCase(),
@@ -19,15 +18,15 @@ class ModalComponent extends React.Component {
             phone: '(92) 3625-9863',
             email: 'andreia.henrique@alenglishcourse.com.br',
             curriculum: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s  with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently  with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-		};
+		}
     }
 
     handleClose() {
-		this.setState({ show: false });
+		this.setState({ show: false })
 	}
 
 	handleShow() {
-		this.setState({ show: true });
+		this.setState({ show: true })
 	}
 
     render() {

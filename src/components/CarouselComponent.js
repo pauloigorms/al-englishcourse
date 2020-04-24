@@ -1,11 +1,11 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-
 import { Row, Col } from 'react-bootstrap'
 
 // components
 import ModalComponent from './../components/ModalComponent'
 
+// Images
 import one from './../assets/img/perfil/teacher/1.jpg'
 import two from './../assets/img/perfil/teacher/2.jpg'
 import three from './../assets/img/perfil/teacher/3.jpg'
