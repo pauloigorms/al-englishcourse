@@ -3,6 +3,9 @@ import Carousel from 'react-bootstrap/Carousel'
 
 import { Row, Col } from 'react-bootstrap'
 
+// components
+import ModalComponent from './../components/ModalComponent'
+
 import one from './../assets/img/perfil/teacher/1.jpg'
 import two from './../assets/img/perfil/teacher/2.jpg'
 import three from './../assets/img/perfil/teacher/3.jpg'
@@ -11,6 +14,9 @@ import four from './../assets/img/perfil/teacher/4.jpg'
 const CarouselComponent = () => {
     return (
         <>
+
+          <ModalComponent />
+
           <Carousel>
 
               <Carousel.Item>

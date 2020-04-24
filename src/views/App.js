@@ -1,16 +1,21 @@
 import React from 'react'
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { IoLogoWhatsapp, IoLogoYoutube, IoIosSend } from "react-icons/io";
+import { IconContext } from 'react-icons'
 
 // Sections
 import NavMenu from './../sections/NavMenu.js'
 import BannerHome from './../sections/BannerHome.js'
 import SkillsHome from './../sections/SkillsHome.js'
+import FooterMinium from './../sections/FooterMinium.js'
 
 // Components
 import FlutuButton from './../components/FlutuButton.js'
 import BigFlutuButton from './../components/BigFlutuButton.js'
 // import NameCourseShadow from './../components/NameCourseShadow.js'
 import CarouselComponent from '../components/CarouselComponent.js'
+import CarouselStudentComponent from '../components/CarouselStudentComponent.js'
 
 // Images
 import arrow from './../assets/img/icons/arrow.svg'
@@ -26,6 +31,7 @@ import teacher from './../assets/img/icons/teacher.svg'
 import heart from './../assets/img/icons/heart.svg'
 import clock from './../assets/img/icons/clock.svg'
 import heart_hand from './../assets/img/icons/heart_hand.svg'
+import logo from './../assets/img/logo.png'
 
 function App() {
   return (
@@ -40,8 +46,10 @@ function App() {
 
           <SkillsHome />
           <Row>
-            <Col sm="12" className="text-center mb-1 mt-5 ">
-              <img src={arrow} className="img-arrow-home img-color-siano mb-1" alt="próxima parte do home" />
+            <Col sm="12" className="text-center mb-1 ">
+              <a href={'/'}>
+                <img src={arrow} className="img-arrow-home img-color-siano mb-1" alt="próxima parte do home" />
+              </a>
             </Col>
           </Row>
 
@@ -129,7 +137,7 @@ function App() {
             </Col>
             <Col sm="10">
               <Row className="card-position-top">                
-                <Col sm="6">
+                <Col sm="6" className="card-no-padding">
                   <a href={'/teen-and-adult'} className="no-decorer">
                     <Card className="card-radius-left-35 card-no-border transition-card-pink">
                       <Card.Body>                    
@@ -146,7 +154,7 @@ function App() {
                     </Card>
                   </a>
                 </Col>
-                <Col sm="6">
+                <Col sm="6" className="card-no-padding">
                   <a href={'immersion-english'} className="no-decorer">
                     <Card className="card-radius-rigth-35 card-no-border transition-card-blue">
                       <Card.Body>                    
@@ -168,7 +176,7 @@ function App() {
         </section>
 
         <br /> <br /> <br />
-        <section className="mt-5">
+        <section className="mt-5 mb-5">
           <Row className="mt-5 justify-content-center">
             <Col sm="11" className=" mb-5">
               <Card className="card-ciano card-radius-35 card-no-border">
@@ -182,13 +190,13 @@ function App() {
                       <Col sm="3">
                         <Form.Group controlId="nome">
                           <Form.Label>NOME</Form.Label>
-                          <Form.Control type="text" placeholder="Cadastre seu nome" />
+                          <Form.Control className="input-news" type="text" placeholder="Cadastre seu nome" />
                         </Form.Group>
                       </Col>
                       <Col sm="4">
                         <Form.Group controlId="email">
                           <Form.Label>E-MAIL</Form.Label>
-                          <Form.Control type="email" placeholder="Cadastre seu e-mail" />
+                          <Form.Control className="input-news" type="email" placeholder="Cadastre seu e-mail" />
                         </Form.Group>
                       </Col>
                       <Col sm="2">
@@ -218,7 +226,7 @@ function App() {
             </Col>
 
             <Col sm="8">
-              <img src={people} className="" alt="pessoas conversando" />
+              <img src={people} className="img-course" alt="pessoas conversando" />
             </Col>
 
             <Col sm="4" className="text-right">
@@ -240,7 +248,7 @@ function App() {
         </section>
 
         <br /> <br /> <br />
-        <section className="mt-5">
+        <section className="mt-5 mb-5">
           <Row>
             <Col sm="1">
               <img src={teacher} className="img-teacher img-color-siano mb-1" alt="ícone representando os professores" />
@@ -258,7 +266,7 @@ function App() {
         </section>
 
         <br /> <br /> <br />
-        <section className="mb-5">
+        <section className="mt-5 mb-5">
           <Row className="align-items-center">
             <Col sm="4" className="text-center">
                   <img src={heart} className="img-menu-category img-color-siano mb-1" alt="ícone de explicação da primeira habilidades" />
@@ -282,21 +290,181 @@ function App() {
                   </p>
               </Col>
             <Col sm="12">
-              <h1>
+              <h2>
                 <strong>Olha o que alguns dos nossos alunos dizem sobre nós</strong>
                 <span className="h-span">...</span>
-              </h1>
+              </h2>
             </Col>
             <Col sm="12" className="mt-5 mb-5">
-              <CarouselComponent />
+              <CarouselStudentComponent />
             </Col>
           </Row>
         </section>
 
+        <br /> <br /> <br />
+        <section className="mt-5 mb-5">
+          <Row>
+            <Col sm="12">
+              <Card className="card-gray card-padding-inter">
+                <Card.Body>
+                  <h4 className="h-dark">
+                    <b>
+                      Quer saber alguma coisa que não falamos aqui?
+                    </b>
+                  </h4>
+                  <h6 className="h-gray">
+                    <b>
+                      Se você ainda tem alguma dúvida, não tem problema. <br/>
+                      Preencha os dados a baixo que logo entraremos em contato com você.
+                    </b>
+                  </h6>
+                  <br />
+                  <Row>
+                    <img src={mail} className="img-contact img-contact-position-15 img-color-dark" alt="figura cosmética de email" />
+                    <img src={mail} className="img-contact img-contact-position-25 img-color-dark" alt="figura cosmética de email" />
+                    <img src={mail} className="img-contact img-contact-position-45 img-color-dark" alt="figura cosmética de email" />
+                    <Col className="8">
+                      <Form>
+                        <Row>
+                          <Col sm="3">
+                            <Form.Group controlId="nome">
+                              <Form.Control className="input-contact" type="text" placeholder="Nome e sobrenome" />
+                            </Form.Group>
+                          </Col>
+                          <Col sm="3">
+                            <Form.Group controlId="email">
+                              <Form.Control className="input-contact" type="text" placeholder="Telefone" />
+                            </Form.Group>
+                          </Col>
+                          <Col sm="6"></Col>
+                        </Row>
+                        <Row>
+                          <Col sm="3">
+                            <Form.Group controlId="nome">
+                              <Form.Control className="input-contact" type="text" placeholder="E-mail" />
+                            </Form.Group>
+                          </Col>
+                          <Col sm="3">
+                            <Form.Group controlId="categoria">
+                              <Form.Control className="input-contact" as="select">
+                                <option disabled selected>Selecione uma categoria</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </Form.Control>
+                            </Form.Group>
+                          </Col>
+                        </Row>
+                        <Row>
+                          <Col sm="6">
+                            <Form.Group controlId="mensagem">
+                              <Form.Control className="input-contact-textarea" as="textarea" rows="3" placeholder="Digite sua mensagem"  />
+                            </Form.Group>
+                          </Col>                       
+                          <Col sm="4">
+                            {['checkbox'].map((type) => (
+                              <div key={type} className="mb-3">
+                                <Form.Check type={type} id={`check-${type}`}>
+                                  <Form.Check.Input type={type} isValid />
+                                  <p className="p-dark p-short">
+                                    Eu aceito receber e-mails com promoções <br/>
+                                    e novidades sobre a A&L English Course.
+                                  </p>
+                                </Form.Check>
+                              </div>
+                            ))}
+                            <Button variant="light" className="btn-default"><b>ENVIAR MENSAGEM</b></Button>{' '}
+                          </Col>
+                        </Row>
+                    </Form>
+                    </Col>
+                  </Row>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </section>
 
-        <FlutuButton />
+        <br /> <br /> <br />
+        <section className="mt-5 mb-5">
+          <Row>
+            <Col sm="4" className="text-left">
+              <img
+                src={logo}
+                className="img-logo-footer"
+                alt="logo completa da empresa"
+              />
+            </Col>
+            <Col sm="4">
+              <h3>
+                Nossas Unidades
+              </h3>
+              <hr className="hr-style" />
+              <h5>CENTRO</h5>
+              <h5>ADRIANÓPOLIS</h5>
+              <h5>ALEIXO</h5>
+              <br /> <br />
+              <Button variant="light" className="btn-default"><b>QUERO SER UM ALUNO</b></Button>{' '}
+            </Col>
+            <Col sm="4">
+              <Card className="card-ciano card-radius-draw-35 ">
+                <Card.Body >
+                  <h4><strong>REDES SOCIAIS</strong></h4>
+                  <br />
+                  <a href={'/'} className="a-white no-decorer">
+                    <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
+                        <div>
+                            <FaFacebookF /> &ensp; <b>facebook.com/alenglishcourse</b>
+                        </div>
+                    </IconContext.Provider>
+                  </a>
+                  <br />
+                  <a href={'/'} className="a-white no-decorer">
+                    <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
+                        <div>
+                            <FaInstagram /> &ensp; <b>instagram.com/al.englishcourse</b>
+                        </div>
+                    </IconContext.Provider>
+                  </a>
+                  <br />
+                  <a href={'/'} className="a-white no-decorer">
+                    <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
+                        <div>
+                            <IoLogoWhatsapp /> &ensp; <b>(92) 9 8145-5086 / (92) 9 9524-5052</b>
+                        </div>
+                    </IconContext.Provider>
+                  </a>
+                  <br />
+                  <a href={'/'} className="a-white no-decorer">
+                    <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
+                        <div>
+                            <IoLogoYoutube /> &ensp; <b>youtube.com/al.englishcourse</b>
+                        </div>
+                    </IconContext.Provider>
+                  </a>
+                  <br />
+                  <a href={'/'} className="a-white no-decorer">
+                    <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
+                        <div>
+                            <IoIosSend /> &ensp; <b>contato@a&lenglishcourse.com.br</b>
+                        </div>
+                    </IconContext.Provider>
+                  </a>
+                  <br />
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </section>
+
+        <FlutuButton />       
 
       </Container>
+
+      <FooterMinium />
+
     </>
   );
 }
