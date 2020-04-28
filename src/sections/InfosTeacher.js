@@ -23,7 +23,7 @@ const InfosTeacher = () => {
                     </p>
                     </Col>
                     <Col sm="12" className="mt-5 mb-5">
-                    <CarouselComponent />
+                        <CarouselComponent />
                     </Col>
                 </Row>
             </section>
