@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './views/App.js'
 import Routes from './Routes.js'
 // import * as serviceWorker from './serviceWorker'
 

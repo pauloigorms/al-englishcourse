@@ -1,0 +1,4 @@
+﻿{
+    "mongo_connection": "mongodb://localhost:27017/db_course",
+    "secret": "a&lenglish"
+}

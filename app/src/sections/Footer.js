@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { MESSAGE } from './../Utils.js'
+
 // Libs
 import { Row, Col, Card, Button } from 'react-bootstrap'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
@@ -52,14 +54,12 @@ const Footer = () => {
                         </div>
                     </IconContext.Provider>
                   </a>
-                  <br />
-                  <a href={'/'} target={'_blank'} rel="noopener noreferrer" className="a-white no-decorer">
-                    <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
-                        <div>
-                            <IoLogoWhatsapp /> &ensp; <b>(92) 9 8145-5086 / (92) 9 9524-5052</b>
-                        </div>
-                    </IconContext.Provider>
-                  </a>
+                  <br />                  
+                  <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
+                      <div>
+                          <IoLogoWhatsapp /> &ensp; <b> <a href={'https://wa.me/5592981455086?text='+MESSAGE} target={'_blank'} rel="noopener noreferrer" className="a-white no-decorer">(92) 9 8145-5086</a> / <a href={'https://wa.me/559295245052?text='+MESSAGE} target={'_blank'} rel="noopener noreferrer" className="a-white no-decorer">(92) 9 9524-5052</a> </b>
+                      </div>
+                  </IconContext.Provider>                  
                   <br />
                   <a href={'https://www.youtube.com/user/vcsabiavideos/'} target={'_blank'} rel="noopener noreferrer" className="a-white no-decorer">
                     <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
