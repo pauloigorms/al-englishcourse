@@ -1,5 +1,9 @@
 import React from 'react'
+import axios from 'axios'
 import { Row, Col, Card, Form, Button } from 'react-bootstrap'
+
+// ultis
+import { BASE_URL } from './../Utils.js'
 
 // Images
 import mail from './../assets/img/icons/mail.svg'
@@ -9,7 +13,15 @@ class News extends React.Component {
     
     constructor(props) {
         super(props)
-        this.state = { isOn: true }
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    handleSubmit(event) {
+        const data = {
+            name: event.target.elements.nome.value, 
+            email: event.target.elements.email.value
+        }
+        axios.post(BASE_URL+'/news', data)
     }
 
     render() {
@@ -20,7 +32,7 @@ class News extends React.Component {
                     <Col sm="11" className=" mb-5">
                         <Card className="card-ciano card-radius-35 card-no-border">
                             <Card.Body>
-                                <Form>
+                                <Form onSubmit={this.handleSubmit}>
                                     <Row>
                                     <img src={mail} className="img-news img-color-dark" alt="figura cosmética de email" />
                                     <Col sm="3" className="text-left label-news">
@@ -28,8 +40,8 @@ class News extends React.Component {
                                     </Col>
                                     <Col sm="3">
                                         <Form.Group controlId="nome">
-                                        <Form.Label>NOME</Form.Label>
-                                        <Form.Control className="input-news" type="text" placeholder="Cadastre seu nome" />
+                                            <Form.Label>NOME</Form.Label>
+                                            <Form.Control className="input-news" type="text" placeholder="Cadastre seu nome" />
                                         </Form.Group>
                                     </Col>
                                     <Col sm="4">
@@ -41,7 +53,7 @@ class News extends React.Component {
                                     <Col sm="2">
                                         <br />
                                         <Button variant="primary" type="submit">
-                                        CADASTRAR
+                                            CADASTRAR
                                         </Button>
                                     </Col>
                                     </Row>

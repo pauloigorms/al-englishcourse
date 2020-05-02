@@ -1,19 +1,17 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import { Row, Col } from 'react-bootstrap'
+import Image from 'react-bootstrap/Image'
+import axios from 'axios'
 
 // components
 import ModalComponent from './../components/ModalComponent'
 
-// ultid
-import { FormatText, convertToList } from './../Utils.js'
-import { get__teachers } from './../services/api.js'
+// ultis
+import { FormatText, convertToList, BASE_URL } from './../Utils.js'
 
 // Images
-// import one from './../assets/img/perfil/teacher/1.jpg'
-// import two from './../assets/img/perfil/teacher/2.jpg'
-// import three from './../assets/img/perfil/teacher/3.jpg'
-// import four from './../assets/img/perfil/teacher/4.jpg'
+import user from './../assets/img/perfil/user.png'
 
 class CarouselComponent extends React.Component {
 
@@ -25,13 +23,12 @@ class CarouselComponent extends React.Component {
   }
 
   componentDidMount() {
-    const teachers = get__teachers()
-    this.setState({m__teachers: convertToList(teachers, 4)})
+    axios.get(BASE_URL+'/teachers')
+      .then(res => { this.setState({ m__teachers: convertToList(res.data, 4) }) })
   }
 
   render() {
-    return (
-        
+    return (        
         <>
 
           <Carousel>
@@ -39,42 +36,40 @@ class CarouselComponent extends React.Component {
             {
               this.state.m__teachers.length ?
               this.state.m__teachers.map(
-                teachers =>
-                  <Carousel.Item>
+                (teachers, i) =>
+                  <Carousel.Item key={i}>
                     <Row>
                       {
                         teachers.map(
                           teacher => 
-                          <Col sm="3" className="teacher-select">
-                            <img
+                          <Col key={teacher._id} sm="3" className="teacher-select">
+                          <Image
                               className="d-block img-teacher-carousel mt-3"
-                              src={teacher.pic}
+                              src={user}
                               alt="Foto de perfil"
-                            />
-                            <h5>{ (teacher.name).toUpperCase() }</h5>
-                            <p className="p-white p-medium less-margin-p text-right"> {(teacher.living).toUpperCase()}</p>
-                            <p className="p-white p-minium text-right">
-                              {FormatText(teacher.bio)}
-                              <ModalComponent
-                                _id = {teacher._id} 
-                                name = {teacher.name} 
-                                pic = {teacher.pic} 
-                                living = {teacher.living} 
-                                phone = {teacher.phone} 
-                                email = {teacher.email} 
-                                facebook = {teacher.facebook} 
-                                instagram = {teacher.instagram} 
-                                lattes = {teacher.lattes} 
-                                other = {teacher.other} 
-                                resume = {teacher.resume} 
-                                bio = {teacher.bio} 
-                                />
-                            </p>
-                          </Col>
+                          />
+                          <h5>{ (teacher.name).toUpperCase() }</h5>
+                          <p className="p-white p-medium less-margin-p text-right"> {(teacher.living).toUpperCase()}</p>
+                          <p className="p-white p-minium text-right">
+                            {FormatText(teacher.bio)}
+                            <ModalComponent
+                              _id = {teacher._id} 
+                              name = {teacher.name} 
+                              pic = {teacher.pic} 
+                              living = {teacher.living} 
+                              phone = {teacher.phone} 
+                              email = {teacher.email} 
+                              facebook = {teacher.facebook} 
+                              instagram = {teacher.instagram} 
+                              lattes = {teacher.lattes} 
+                              other = {teacher.other} 
+                              resume = {teacher.resume} 
+                              bio = {teacher.bio} 
+                              />
+                          </p>
+                        </Col>                        
                         )
                       }
-                      
-
                     </Row>              
                   </Carousel.Item>                
               ) : null

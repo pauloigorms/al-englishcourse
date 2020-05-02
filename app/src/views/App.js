@@ -54,10 +54,10 @@ function App() {
         <News />
 
         <br /> <br /> <br />
-        <InfosTeacher />
+        {/* <InfosTeacher /> */}
 
         <br /> <br /> <br />
-        <CommentsStudents />
+        {/* <CommentsStudents /> */}
 
         <br /> <br /> <br />
         <LearnUser />

@@ -1,4 +1,5 @@
 ﻿const config = require('_bin/config.json')
+const nodemailer = require("nodemailer")
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const u__db = require('_helpers/connection/users')
@@ -7,6 +8,8 @@ const t__db = require('_helpers/connection/teachers')
 const Teachers = t__db.Teachers
 const c__db = require('_helpers/connection/comments')
 const Comments = c__db.Comments
+const n__db = require('_helpers/connection/news')
+const News = n__db.News
 // U3SMX8v2aYyN3WGlTmL4bFGs9NZmDZ2Qke3lrP
 module.exports = {
   register,
@@ -15,7 +18,10 @@ module.exports = {
   create__teacher,
   get__teachers,
   create__comment,
-  get__comments
+  get__comments,
+  create__list__news,
+  get__list__news,
+  send_mail
 }
 
 async function register(params) {
@@ -68,7 +74,7 @@ async function create__teacher(params) {
 }
 
 async function get__teachers() {
-  return await Teachers.find()
+  return await Teachers.find({"status":true})
 }
 
 async function create__comment(params) {
@@ -81,5 +87,47 @@ async function create__comment(params) {
 }
 
 async function get__comments() {
-  return await Comments.find()
+  return await Comments.find({"status": true})
+}
+
+async function create__list__news(params) {
+  try {
+    const news = new News(params)
+    await news.save()
+  } catch (e) {
+    throw e.message;
+  }
+}
+
+async function get__list__news() {
+  return await News.find()
+}
+
+
+async function send_mail(params) {
+  try {
+    
+    let account = await nodemailer.createTestAccount()
+    let transporter = nodemailer.createTransport({
+      host: "smtp.ethereal.email",
+      port: 587,
+      secure: false,
+      auth: {
+        user: account.user,
+        pass: account.pass
+      }
+    })
+    let info = await transporter.sendMail({
+      from: `${params.emissor} <${params.email}>`,
+      to: "paulo.moraes@semptcl.com.br",
+      subject: params.categoria,
+      text: params.mensagem, 
+      html: "<b>" + params.mensagem + "</b>" 
+    })
+
+    console.log("Message sent: %s", info.messageId);
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  } catch (e) {
+    throw e.message;
+  }
 }

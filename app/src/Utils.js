@@ -14,7 +14,7 @@ export const convertToList = (arr__, elements) => {
     return matrix
 }
 
-export const BASE_URL = 'localhost:8080/api'
+export const BASE_URL = 'http://localhost:443/api'
 
 export const MESSAGE = "Olá, tudo bem? Adorei seu curso e gostaria de mais algumas informações!"
 

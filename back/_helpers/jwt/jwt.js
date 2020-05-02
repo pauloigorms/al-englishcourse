@@ -12,7 +12,8 @@ function jwt() {
             '/api/signin',
             '/api/teachers',
             '/api/comments',
-            /^\/api\/upload-image\/.*/            
+            '/api/news',
+            '/api/mail'        
         ]
     })
 }

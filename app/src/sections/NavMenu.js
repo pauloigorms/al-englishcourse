@@ -11,7 +11,9 @@ const NavMenu = () => {
         <>
             <Row className="mt-5">
                 <Col sm="8" className="text-left">
-                    <img src={short_logo} className="img-logo-menu" alt="logo do menu inicial"/>
+                    <a href={'/'}>
+                        <img src={short_logo} className="img-logo-menu" alt="logo do menu inicial"/>
+                    </a>
                 </Col>
                 <Col sm="1">
                     <Dropdown>

@@ -18,6 +18,7 @@
         "jsonwebtoken": "^8.2.2",
         "mongodb": "^3.0.10",
         "mongoose": "^5.9.10",
+        "nodemailer": "^6.4.6",
         "nodemon": "^1.19.4",
         "rootpath": "^0.1.2"
     },

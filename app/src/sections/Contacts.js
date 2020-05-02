@@ -1,14 +1,29 @@
 import React from 'react'
 import { Row, Col, Card, Form, Button } from 'react-bootstrap'
+import axios from 'axios'
 
 // Images
 import mail from './../assets/img/icons/mail.svg'
+
+import { BASE_URL } from './../Utils.js'
 
 class Contacts extends React.Component {
     
     constructor(props) {
         super(props)
-        this.state = { isOn: true }
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    handleSubmit(event) {
+        const data = {
+            emissor: event.target.elements.nome.value, 
+            telefone: event.target.elements.telefone.value, 
+            email: event.target.elements.email.value,
+            categoria: event.target.elements.categoria.value,
+            mensagem: event.target.elements.mensagem.value
+        }
+        axios.post(BASE_URL+'/mail', data)
+          .then(res => { })
     }
 
     render() {
@@ -36,49 +51,53 @@ class Contacts extends React.Component {
                             <img src={mail} className="img-contact img-contact-position-25 img-color-dark" alt="figura cosmética de email" />
                             <img src={mail} className="img-contact img-contact-position-45 img-color-dark" alt="figura cosmética de email" />
                             <Col className="8">
-                            <Form>
+                            <Form  onSubmit={this.handleSubmit}>
                                 <Row>
                                 <Col sm="3">
                                     <Form.Group controlId="nome">
-                                    <Form.Control className="input-contact" type="text" placeholder="Nome e sobrenome" />
+                                        <Form.Control className="input-contact" required type="text" placeholder="Nome e sobrenome" />
                                     </Form.Group>
                                 </Col>
                                 <Col sm="3">
-                                    <Form.Group controlId="email">
-                                    <Form.Control className="input-contact" type="text" placeholder="Telefone" />
+                                    <Form.Group controlId="telefone">
+                                        <Form.Control className="input-contact" required type="text" placeholder="Telefone" />
                                     </Form.Group>
                                 </Col>
                                 <Col sm="6"></Col>
                                 </Row>
                                 <Row>
                                 <Col sm="3">
-                                    <Form.Group controlId="nome">
-                                    <Form.Control className="input-contact" type="text" placeholder="E-mail" />
+                                    <Form.Group controlId="email">
+                                    <   Form.Control className="input-contact" required type="email" placeholder="E-mail" />
                                     </Form.Group>
                                 </Col>
                                 <Col sm="3">
                                     <Form.Group controlId="categoria">
-                                    <Form.Control className="input-contact" as="select">
-                                        <option disabled selected>Selecione uma categoria</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Form.Control>
+                                        <Form.Control className="input-contact" as="select" defaultValue={'1'}>
+                                            <option disabled defaultValue="1">Selecione uma categoria</option>
+                                            <option defaultValue="1">1</option>
+                                            <option value="2">2</option>
+                                        </Form.Control>
                                     </Form.Group>
                                 </Col>
                                 </Row>
                                 <Row>
                                 <Col sm="6">
                                     <Form.Group controlId="mensagem">
-                                    <Form.Control className="input-contact-textarea" as="textarea" rows="3" placeholder="Digite sua mensagem"  />
+                                    <Form.Control className="input-contact-textarea" required as="textarea" rows="3" placeholder="Digite sua mensagem"  />
                                     </Form.Group>
                                 </Col>                       
                                 <Col sm="4">
-                                    {['checkbox'].map((type) => (
+                                     <Form.Group controlId="check">
+                                        <Form.Check type="checkbox" value="1" />
+                                        <p className="p-dark p-short">
+                                            Eu aceito receber e-mails com promoções <br/>
+                                            e novidades sobre a A&L English Course."
+                                        </p>                                         
+                                    </Form.Group>
+                                    {/* {['checkbox'].map((type) => (
                                     <div key={type} className="mb-3">
-                                        <Form.Check type={type} id={`check-${type}`}>
+                                        <Form.Check type={type} id={`check`}>
                                         <Form.Check.Input type={type} isValid />
                                         <p className="p-dark p-short">
                                             Eu aceito receber e-mails com promoções <br/>
@@ -86,8 +105,8 @@ class Contacts extends React.Component {
                                         </p>
                                         </Form.Check>
                                     </div>
-                                    ))}
-                                    <Button variant="light" className="btn-default"><b>ENVIAR MENSAGEM</b></Button>{' '}
+                                    ))} */}
+                                    <Button variant="light"  type="submit" className="btn-default"><b>ENVIAR MENSAGEM</b></Button>
                                 </Col>
                                 </Row>
                             </Form>

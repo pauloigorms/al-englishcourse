@@ -38,7 +38,7 @@ app.use(errorHandler);
 // start server
 //const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
 //"mongo_connection": "mongodb://localhost:27017/rdb",mongodb+srv://residuum-sys:residuum2019@cluster0-kwige.mongodb.net/test?retryWrites=true
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 443;
 const host = '0.0.0.0'
 app.listen(port, host, function () {
     console.log('server-listening-on-port[::: ' + port + ' :::]');

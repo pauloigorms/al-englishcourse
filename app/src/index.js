@@ -8,11 +8,14 @@ import 'normalize.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/css/costumer.scss'
 
+const baseUrl = document.getElementsByTagName('base')[0]
+const rootElement = document.getElementById('root')
+
 ReactDOM.render(
-  <React.StrictMode>
+  <React.StrictMode basename={baseUrl}>
     <Routes />
   </React.StrictMode>,
-  document.getElementById('root')
+  rootElement
 )
 
 // serviceWorker.unregister()

@@ -44,29 +44,6 @@ const CarouselUserComponent = () => {
                                 </Col>
                             </Row>
                         </Carousel.Item>
-
-                        <Carousel.Item> 
-                            <Row>
-                                <Col sm="3" className="mt-5">
-                                    <h1 className="h-ciano h-resize">
-                                        02
-                                    </h1>
-                                    <h3>
-                                        Acesse a plataforma
-                                        clicando <a className="no-decorer a-ciano" target={'_blank'} rel="noopener noreferrer" href={'https://app-vlc.hotmart.com/signup'}>aqui.</a> &emsp;
-                                        Quando fizer isso
-                                        encontrará está página
-                                    </h3>
-                                </Col>
-                                <Col sm="9">                                                        
-                                    <img
-                                        className="d-block w-100"
-                                        src={stud_1}
-                                        alt="First slide"
-                                    />                                                    
-                                </Col>
-                            </Row>
-                        </Carousel.Item>
                         
                     </Carousel>
                 </Row>

@@ -7,14 +7,7 @@ const BannerHome = () => {
             <Row className="mt-5 mb-4">
                 <Col sm="8" className="text-center">
                     {/* <Card> */}
-                    <iframe 
-                        width="720" 
-                        height="400" 
-                        src="https://www.youtube.com/embed/0rH_r9BRs1Q" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>                        
-                    </iframe>
+                    
                     {/* </Card> */}
                 </Col>
                 <Col sm="4" className="text-right">

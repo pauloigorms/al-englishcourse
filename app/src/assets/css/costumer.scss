@@ -44,6 +44,9 @@ p {
   &.p-ciano {
     color: #00E1E1 !important;
   }
+  &.p-pink {
+    color: var(--txt--color-pink) !important;
+  }
   &.p-medium {
     font-size: 18px !important;
   }
@@ -264,6 +267,18 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50rem !important;
   padding-left: 2rem !important;
   padding-right: 2rem !important;
+}
+
+.btn-pink {
+  color: whitesmoke !important;
+  background-color: var(--txt--color-pink) !important;
+  border-color: var(--txt--color-pink) !important;
+}
+
+.btn-blue {
+  color: whitesmoke !important;
+  background-color: var(--txt--color-blue) !important;
+  border-color: var(--txt--color-blue) !important;
 }
 
 .btn-default {
@@ -525,4 +540,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hr-style {
   border: 2px solid whitesmoke;
+}
+
+.pad {
+  padding: 5rem;
 }
