@@ -3,7 +3,7 @@ import React from 'react'
 const BigFlutuButton = () => {
     return (
         <>
-            <a href={'www.google.com'} className="no-decorer">
+            <a href={'https://app-vlc.hotmart.com/signup'} target={'_blank'} rel="noopener noreferrer"  className="a-white no-decorer">
                 <div className="big-contact-around">
                     <h2> &emsp; <strong className="m-auto">QUERO ME MATRICULAR</strong> &emsp;</h2>
                 </div>

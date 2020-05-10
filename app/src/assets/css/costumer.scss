@@ -33,6 +33,15 @@ body {
   color: #180A29 !important;
 }
 
+.a-white-dark {
+  color: whitesmoke !important;
+}
+
+.a-white-dark:hover {
+  color: var(--txt--color-ciano) !important;
+  text-decoration: none !important;
+}
+
 p {
   font-family: 'Trebuchet MS';
   &.p-gray {
@@ -269,6 +278,24 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 2rem !important;
 }
 
+.btn-primary {
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+
+.dropdown-item {
+ font-weight: 700;
+ padding-top: 5%; 
+ padding-bottom: 5%; 
+}
+
+.dropdown-item:hover {
+  font-weight: 700;
+  padding-top: 5%; 
+  padding-bottom: 5%;
+  color: var(--txt--color-ciano)
+}
+
 .btn-pink {
   color: whitesmoke !important;
   background-color: var(--txt--color-pink) !important;
@@ -295,6 +322,16 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline-light:hover {
   color: whitesmoke !important;
   background-color: #00E1E1 !important;
+}
+
+.btn-outline-white {
+  color: var(--txt--color-ciano) !important;
+  border-color: whitesmoke !important;
+}
+
+.btn-outline-white:hover {
+  color: var(--txt--color-ciano) !important;
+  background-color: whitesmoke !important;
 }
 
 .btn-outline-light-left {
@@ -353,6 +390,12 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   right: 5rem;
   bottom: 5rem;
+}
+
+.content-fixed {
+  position: fixed;
+  right: 5rem;
+  bottom: 10rem;
 }
 
 .contact-fixed {
@@ -544,4 +587,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .pad {
   padding: 5rem;
+}
+
+.div-contact {
+  width: 18rem;
+  height: 13rem;
+  border-radius: 10px;
+  background: -webkit-linear-gradient(top, var(--txt--color-ciano) 40%, white 0%);
+  color: white;
+  font-weight: 800;
+  font-size: 1.4rem;
+  text-align: center;
+  padding-top: 8px;
+  box-shadow: 0 40px 80px 0 rgba(180, 180, 180, 0.2);
 }

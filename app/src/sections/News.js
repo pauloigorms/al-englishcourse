@@ -50,11 +50,9 @@ class News extends React.Component {
                                         <Form.Control className="input-news" type="email" placeholder="Cadastre seu e-mail" />
                                         </Form.Group>
                                     </Col>
-                                    <Col sm="2">
+                                    <Col sm="2" className="mt-2">
                                         <br />
-                                        <Button variant="primary" type="submit">
-                                            CADASTRAR
-                                        </Button>
+                                        <Button variant="light"  type="submit" className="btn-outline-white"><b>CADASTRAR</b></Button>
                                     </Col>
                                     </Row>
                                 </Form>
@@ -91,7 +89,9 @@ class News extends React.Component {
                         Todo aluno A&L English Course tem condições especiais para estudar
                         </p>
                         <br />
-                        <Button variant="light" className="btn-default"><b>QUERO SER UM ALUNO</b></Button>{' '}
+                        <a href={'https://app-vlc.hotmart.com/signup'} target={'_blank'} rel="noopener noreferrer"  className="no-decorer">
+                            <Button variant="light" className="btn-default"><b>QUERO SER UM ALUNO</b></Button>{' '}
+                        </a>
                     </Col>
                 </Row>
             </section>

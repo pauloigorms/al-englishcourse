@@ -24,15 +24,14 @@ const Footer = () => {
               />
             </Col>
             <Col sm="4">
-              <h3>
-                Nossas Unidades
-              </h3>
-              <hr className="hr-style" />
-              <h5>CENTRO</h5>
-              <h5>ADRIANÓPOLIS</h5>
-              <h5>ALEIXO</h5>
+              <p><a href={'#modalidade'} className="a-white-dark">&#9679; &ensp; NOSSAS MODALIDADE</a></p>
+              <p><a href={'#comentarios'} className="a-white-dark">&#9679; &ensp; NOSSOS ALUNOS</a></p>
+              <p><a href={'#professores'} className="a-white-dark">&#9679; &ensp; NOSSOS PROFESSORES</a></p>
+              <p><a href={'#plataforma'} className="a-white-dark">&#9679; &ensp; COMO ME MATRICULO?</a></p>
               <br /> <br />
-              <Button variant="light" className="btn-default"><b>QUERO SER UM ALUNO</b></Button>{' '}
+              <a href={'https://manychat.com/l2/ALengishcourse'} target={'_blank'} rel="noopener noreferrer">
+                <Button variant="light" className="btn-default"><b>EXPERIMENTAR AULA GRÁTIS</b></Button>
+              </a>
             </Col>
             <Col sm="4">
               <Card className="card-ciano card-radius-draw-35 ">

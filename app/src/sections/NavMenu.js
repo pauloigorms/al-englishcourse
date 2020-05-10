@@ -29,7 +29,9 @@ const NavMenu = () => {
                     </Dropdown>
                 </Col>
                 <Col sm="3" className="text-right">
-                    <Button variant="outline-light"><b>FAZER MATRÍCULA</b></Button>{' '}
+                    <a href={'https://app-vlc.hotmart.com/signup'} target={'_blank'} rel="noopener noreferrer">
+                        <Button variant="outline-light"><b>FAZER MATRÍCULA</b></Button>{' '}
+                    </a>                    
                 </Col>
             </Row>
         </>

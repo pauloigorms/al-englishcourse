@@ -73,10 +73,11 @@ class Contacts extends React.Component {
                                 </Col>
                                 <Col sm="3">
                                     <Form.Group controlId="categoria">
-                                        <Form.Control className="input-contact" as="select" defaultValue={'1'}>
-                                            <option disabled defaultValue="1">Selecione uma categoria</option>
-                                            <option defaultValue="1">1</option>
-                                            <option value="2">2</option>
+                                        <Form.Control className="input-contact" as="select" required>
+                                            <option selected disabled>Selecione uma categoria</option>
+                                            <option value="DÚVIDAS">DÚVIDAS</option>
+                                            <option value="INFORMAÇÕES">INFORMAÇÕES</option>
+                                            <option value="RECLAMAÇÕES">RECLAMAÇÕES</option>
                                         </Form.Control>
                                     </Form.Group>
                                 </Col>
