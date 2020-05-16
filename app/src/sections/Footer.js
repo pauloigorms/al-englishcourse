@@ -63,7 +63,7 @@ const Footer = () => {
                             </div>
                         </IconContext.Provider>                  
                         <br />
-                        <a href={'https://www.youtube.com/channel/UCqPxcWdRmaIrgEBKz5T01lA'} target={'_blank'} rel="noopener noreferrer" className="a-white no-decorer">
+                        <a href={'https://www.youtube.com/channel/UCeSP6Q93ZWB2sxhY2Q6-dSg?view_as=subscriber'} target={'_blank'} rel="noopener noreferrer" className="a-white no-decorer">
                           <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
                               <div>
                                   <IoLogoYoutube /> &ensp; <b>youtube.com/al.englishcourse</b>
