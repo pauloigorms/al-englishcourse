@@ -8,7 +8,7 @@ import axios from 'axios'
 import ModalComponent from './../components/ModalComponent'
 
 // ultis
-import { FormatText, convertToList, BASE_URL } from './../Utils.js'
+import { FormatText, convertToList, EXTERNAL_URL } from './../Utils.js'
 
 // Images
 import user from './../assets/img/perfil/user.png'
@@ -23,7 +23,7 @@ class CarouselComponent extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(BASE_URL+'/teachers')
+    axios.get(EXTERNAL_URL+'/teachers')
       .then(res => { this.setState({ m__teachers: convertToList(res.data, 4) }) })
   }
 

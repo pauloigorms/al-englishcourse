@@ -2,8 +2,9 @@ import React from 'react'
 
 // Images
 import whatsapp from './../assets/img/icons/whatsapp.svg'
+import communication from './../assets/img/icons/communication.svg'
 import mail from './../assets/img/icons/mail.svg'
-import { Row, Col } from 'react-bootstrap'
+import web from './../assets/img/icons/web.svg'
 
 import { MESSAGE } from './../Utils.js'
 
@@ -27,38 +28,46 @@ class FlutuButton extends React.Component {
                 <div className="App">
                     <div>
                         {
-                            this.state.show ?   
-                                <div className="div-contact content-fixed">
-                                    Precisa de ajuda?
-                                    <p className="p-minium">Clique em um dos nossos canais abaixo</p>
-                                    <Row className="mt-5">
-                                        <Col sm="6" className="pad-right">
-                                            <a 
-                                                href={'https://wa.me/5592981455086?text='+MESSAGE} 
-                                                target={'_blank'} 
-                                                rel="noopener noreferrer" 
-                                                className="">
-                                                <div className="contact-around">
-                                                    <img src={whatsapp} className="item-century img-contact-flutu-button img-color-white" alt="contatos" />
-                                                </div>
-                                            </a>
-                                        </Col>
-                                        <Col sm="6" className="pad-left">
-                                            <a 
-                                                href={'mailto:lclaudio.costa@hotmail.com'} 
-                                                rel="noopener noreferrer"
-                                                className="text-center">
-                                                <div className="contact-around">
-                                                    <img src={mail} className="item-century img-contact-flutu-button img-color-white" alt="contatos" />
-                                                </div>
-                                            </a>
-                                        </Col>
-                                    </Row>
-                                </div>
+                            this.state.show ?
+                                <div>
+                                    <div className="content-fixed-btn-1">
+                                        <a 
+                                            href={'https://wa.me/5592981455086?text='+MESSAGE} 
+                                            target={'_blank'} 
+                                            rel="noopener noreferrer" 
+                                            className="">
+                                            <div title="WhatSapp direto" className="contact-around-btn-1">
+                                                <img src={whatsapp} className="item-century img-contact-flutu-button-item img-color-white" alt="contatos" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="content-fixed-btn-2">
+                                        <a 
+                                            href={'https://wa.me/5592981455086?text='+MESSAGE} 
+                                            target={'_blank'} 
+                                            rel="noopener noreferrer" 
+                                            className="">
+                                            <div title="Envie um email" className="contact-around-btn-1">
+                                                <img src={mail} className="item-century img-contact-flutu-button-item img-color-white" alt="contatos" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="content-fixed-btn-3">
+                                        <a 
+                                            href={'https://manychat.com/l2/ALengishcourse'} 
+                                            target={'_blank'} 
+                                            rel="noopener noreferrer" 
+                                            className="">
+                                            <div title="Aula Grátis" className="contact-around-btn-1">
+                                                <img src={web} className="item-century img-contact-flutu-button-item img-color-white" alt="contatos" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>                        
                             : null
                         }
-                        <div className="contact-around fixed" onClick={()=>{this.setState({show:!this.state.show})}}>
-                            <img src={whatsapp} className="item-century img-contact-flutu-button img-color-white" alt="contatos" />
+                        <div title="Contatos extras" className="contact-around fixed" onClick={()=>{this.setState({show:!this.state.show})}}>
+                            <img src={communication} className="item-century img-contact-flutu-button img-color-white" alt="contatos" />
                         </div>
                     </div>
                 </div>

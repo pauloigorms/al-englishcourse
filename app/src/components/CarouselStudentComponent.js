@@ -4,12 +4,12 @@ import axios from 'axios'
 import { Row, Col, Card } from 'react-bootstrap'
 
 // ultis
-import { convertToList, BASE_URL } from './../Utils.js'
+import { convertToList, EXTERNAL_URL } from './../Utils.js'
 
 import quotation from './../assets/img/icons/quotation.svg'
 import user from './../assets/img/perfil/user.png'
 
-class CarouselStudentComponent extends React.Component {
+export default class CarouselStudentComponent extends React.Component {
     
     constructor(props) {
         super(props)
@@ -19,7 +19,7 @@ class CarouselStudentComponent extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(BASE_URL+'/comments')
+        axios.get(EXTERNAL_URL+'/comments')
           .then(res => { this.setState({ comments: convertToList(res.data, 3) }) })
       }
 
@@ -30,13 +30,13 @@ class CarouselStudentComponent extends React.Component {
                 {
                     this.state.comments.length ?
                     this.state.comments.map(
-                        (comments, idx) =>
-                        <Carousel.Item key={idx}>
+                        (comments, index) =>
+                        <Carousel.Item key={index}>
                             <Row>
                             {
                                 comments.map(
-                                    comment => 
-                                    <Col sm="4" className="text-right">                        
+                                    (comment, item) => 
+                                    <Col sm="4" className="text-right" key={item}>                        
                                         <Card className="card-comment mb-4">
                                             <Card.Body>
                                                 <Row>
@@ -80,5 +80,3 @@ class CarouselStudentComponent extends React.Component {
     } 
 
 }
-
-export default CarouselStudentComponent

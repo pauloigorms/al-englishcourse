@@ -5,7 +5,7 @@ import axios from 'axios'
 // Images
 import mail from './../assets/img/icons/mail.svg'
 
-import { BASE_URL } from './../Utils.js'
+import { EXTERNAL_URL } from './../Utils.js'
 
 class Contacts extends React.Component {
     
@@ -22,7 +22,7 @@ class Contacts extends React.Component {
             categoria: event.target.elements.categoria.value,
             mensagem: event.target.elements.mensagem.value
         }
-        axios.post(BASE_URL+'/mail', data)
+        axios.post(EXTERNAL_URL+'/mail', data)
           .then(res => { })
     }
 
@@ -74,9 +74,8 @@ class Contacts extends React.Component {
                                 <Col sm="3">
                                     <Form.Group controlId="categoria">
                                         <Form.Control className="input-contact" as="select" required>
-                                            <option selected disabled>Selecione uma categoria</option>
-                                            <option value="DÚVIDAS">DÚVIDAS</option>
-                                            <option value="INFORMAÇÕES">INFORMAÇÕES</option>
+                                            <option defaultValue="INFORMAÇÕES">INFORMAÇÕES</option>
+                                            <option value="DÚVIDAS">DÚVIDAS</option>                                            
                                             <option value="RECLAMAÇÕES">RECLAMAÇÕES</option>
                                         </Form.Control>
                                     </Form.Group>

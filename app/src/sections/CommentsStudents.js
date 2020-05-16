@@ -43,7 +43,7 @@ const CommentsStudents = () => {
                     </h2>
                     </Col>
                     <Col sm="12" className="mt-5 mb-5">
-                    <CarouselStudentComponent />
+                        <CarouselStudentComponent />
                     </Col>
                 </Row>
             </section>

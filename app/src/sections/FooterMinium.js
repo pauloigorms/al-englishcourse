@@ -15,7 +15,7 @@ class FooterMinium extends React.Component {
                     <Col sm="4">
                         <p className="p-white p-minium">
                             Feito com &#10084; por &ensp;
-                            <a 
+                            <a target={'_blank'} rel="noopener noreferrer"
                                 href={'http://paulomoraes.me/'}
                                 className="no-decorer"> 
                             Paulo Moraes </a>                        

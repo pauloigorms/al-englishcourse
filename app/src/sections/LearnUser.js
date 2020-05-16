@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Button, ButtonGroup } from 'react-bootstrap'
+import { Row, Col, /*Button, ButtonGroup*/ } from 'react-bootstrap'
 
 // Components
 import CarouselUserComponent from './../components/CarouselUserComponent.js'
@@ -30,7 +30,7 @@ class LearnUser extends React.Component {
                 <section className="mt-5 mb-5" id="plataforma">
                     <br/> <br/>
                     <Row>
-                        <Col sm="12">
+                        {/* <Col sm="12">
                             <ButtonGroup aria-label="Basic example">
                                 <Button 
                                     variant="outline-light"
@@ -45,7 +45,7 @@ class LearnUser extends React.Component {
                                         <b>Como faço pra me matricular?</b>
                                 </Button>
                             </ButtonGroup>
-                        </Col>
+                        </Col> */}
                         <Col sm="12" id="student">
                             <CarouselUserComponent />
                         </Col>

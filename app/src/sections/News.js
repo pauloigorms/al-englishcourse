@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Row, Col, Card, Form, Button } from 'react-bootstrap'
 
 // ultis
-import { BASE_URL } from './../Utils.js'
+import { EXTERNAL_URL } from './../Utils.js'
 
 // Images
 import mail from './../assets/img/icons/mail.svg'
@@ -21,7 +21,7 @@ class News extends React.Component {
             name: event.target.elements.nome.value, 
             email: event.target.elements.email.value
         }
-        axios.post(BASE_URL+'/news', data)
+        axios.post(EXTERNAL_URL+'/news', data)
     }
 
     render() {
@@ -89,7 +89,7 @@ class News extends React.Component {
                         Todo aluno A&L English Course tem condições especiais para estudar
                         </p>
                         <br />
-                        <a href={'https://app-vlc.hotmart.com/signup'} target={'_blank'} rel="noopener noreferrer"  className="no-decorer">
+                        <a href={'https://pay.hotmart.com/R29374053W?checkoutMode=0&bid=1589338420462'} target={'_blank'} rel="noopener noreferrer"  className="no-decorer">
                             <Button variant="light" className="btn-default"><b>QUERO SER UM ALUNO</b></Button>{' '}
                         </a>
                     </Col>

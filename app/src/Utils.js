@@ -15,6 +15,7 @@ export const convertToList = (arr__, elements) => {
 }
 
 export const BASE_URL = 'http://localhost:443/api'
+export const EXTERNAL_URL = 'http://api-aleducation-com.umbler.net/api'
 
 export const MESSAGE = "Olá, tudo bem? Adorei seu curso e gostaria de mais algumas informações!"
 

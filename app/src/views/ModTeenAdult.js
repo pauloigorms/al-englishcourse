@@ -53,7 +53,9 @@ class ModTeenAdult extends React.Component {
                                                 pessoalmente em qualquer
                                                 unidade ou via site.
                                             </p>
-                                            <Button variant="light" className="btn-pink"><b>FAZER MATRÍCULA</b></Button>{' '}
+                                            <a href={'https://www.hotmart.com/product/a-l-english-course/R29374053W'} target={'_blank'} rel="noopener noreferrer">
+                                                <Button variant="light" className="btn-pink"><b>FAZER MATRÍCULA</b></Button>{' '}
+                                            </a>
                                         </Col>
                                     </Row>                                    
                                 </Card.Body>

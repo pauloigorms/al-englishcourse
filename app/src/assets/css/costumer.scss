@@ -21,6 +21,14 @@ body {
   background-color: var(--txt-color-dark);
 }
 
+.player {
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+  width: 720px; 
+  height: auto;
+}
+
 .a-ciano {
   color: var(--txt--color-ciano) !important;
 }
@@ -209,6 +217,10 @@ label {
   height: 2.4rem;
 } 
 
+.img-contact-flutu-button-item {
+  height: 2rem;
+} 
+
 .img-color-dark {
   filter: invert(3%) sepia(77%) saturate(3586%) hue-rotate(262deg) brightness(99%) contrast(98%);
 }
@@ -359,6 +371,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #00E1E1;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
   padding-top: .5rem;
+  cursor: -webkit-grab; cursor: grab;
 }
 
 .short-around {
@@ -396,6 +409,24 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   right: 5rem;
   bottom: 10rem;
+}
+
+.content-fixed-btn-1 {
+  position: fixed;
+  right: 5.5rem;
+  bottom: 10rem;
+}
+
+.content-fixed-btn-2 {
+  position: fixed;
+  right: 5.5rem;
+  bottom: 14.5rem;
+}
+
+.content-fixed-btn-3 {
+  position: fixed;
+  right: 5.5rem;
+  bottom: 18.7rem;
 }
 
 .contact-fixed {
@@ -587,6 +618,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .pad {
   padding: 5rem;
+}
+
+
+.contact-around-btn-1 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #00E1E1;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  padding-top: .5rem;
+  cursor: -webkit-grab; cursor: grab;
 }
 
 .div-contact {
