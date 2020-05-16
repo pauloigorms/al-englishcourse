@@ -68,7 +68,7 @@ function App() {
         <br /> <br /> <br />
         <Footer />
 
-        {/* <FlutuButton />        */}
+        <FlutuButton />       
 
       </Container>
 

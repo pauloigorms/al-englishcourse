@@ -12,6 +12,14 @@ class Contacts extends React.Component {
     constructor(props) {
         super(props)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+        this.state = {
+            checkboxChecked: false
+        }
+    }
+
+    handleChange(e) {
+        this.setState({ checkboxChecked: e.target.checked })
     }
 
     handleSubmit(event) {
@@ -20,6 +28,7 @@ class Contacts extends React.Component {
             telefone: event.target.elements.telefone.value, 
             email: event.target.elements.email.value,
             categoria: event.target.elements.categoria.value,
+            receber_email: this.state.checkboxChecked ? 'ACEITO' : 'NÃO ACEITO',
             mensagem: event.target.elements.mensagem.value
         }
         axios.post(EXTERNAL_URL+'/mail', data)
@@ -88,7 +97,10 @@ class Contacts extends React.Component {
                                 </Col>                       
                                 <Col sm="4">
                                      <Form.Group controlId="check">
-                                        <Form.Check type="checkbox" value="1" />
+                                        <Form.Check 
+                                            type="checkbox"
+                                            checked={this.state.checkboxChecked}
+                                            onChange={this.handleChange} />
                                         <p className="p-dark p-short">
                                             Eu aceito receber e-mails com promoções <br/>
                                             e novidades sobre a A&L English Course."

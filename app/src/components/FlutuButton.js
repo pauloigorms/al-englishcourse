@@ -36,8 +36,13 @@ class FlutuButton extends React.Component {
                                             target={'_blank'} 
                                             rel="noopener noreferrer" 
                                             className="">
-                                            <div title="WhatSapp direto" className="contact-around-btn-1">
-                                                <img src={whatsapp} className="item-century img-contact-flutu-button-item img-color-white" alt="contatos" />
+                                            <div 
+                                                title="WhatSapp direto" 
+                                                className="contact-around-btn-1">
+                                                <img 
+                                                    src={whatsapp} 
+                                                    className="item-century img-contact-flutu-button-item img-color-white" 
+                                                    alt="contatos" />
                                             </div>
                                         </a>
                                     </div>
@@ -67,7 +72,10 @@ class FlutuButton extends React.Component {
                             : null
                         }
                         <div title="Contatos extras" className="contact-around fixed" onClick={()=>{this.setState({show:!this.state.show})}}>
-                            <img src={communication} className="item-century img-contact-flutu-button img-color-white" alt="contatos" />
+                            <img 
+                                src={communication} 
+                                className="item-century img-contact-flutu-button img-color-white" 
+                                alt="contatos" />
                         </div>
                     </div>
                 </div>

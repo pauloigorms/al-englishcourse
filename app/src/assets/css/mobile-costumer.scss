@@ -132,7 +132,6 @@
     .mob-mt-6 {
         margin-top: 6rem;
     }
-      
 
     // FOOTER
     .mt-mob-5 {
@@ -145,4 +144,59 @@
     .mob-text-center {
         text-align: center !important;
     }
+
+    // BTN FLUTUANTE
+    .contact-around {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: #00E1E1;
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+        padding-top: .5rem;
+        cursor: -webkit-grab; cursor: grab;
+    }
+    .img-contact-flutu-button {
+        height: 1.8rem;
+    }
+    .img-contact-flutu-button-item {
+        height: 1.4rem;
+      } 
+    .fixed {
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+    }
+    .content-fixed-btn-1 {
+        position: fixed;
+        right: 2.4rem;
+        bottom: 6rem;
+    }    
+    .content-fixed-btn-2 {
+        position: fixed;
+        right: 2.4rem;
+        bottom: 9.5rem;
+    }    
+    .content-fixed-btn-3 {
+        position: fixed;
+        right: 2.4rem;
+        bottom: 13rem;
+    }
+    .contact-around-btn-1 {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: #00E1E1;
+        box-shadow: 0 40px 80px 0 rgba(50, 11, 158, 0.2);
+        padding-top: .5rem;
+        cursor: -webkit-grab; cursor: grab;
+    }
+
+
+    // -----------------------------------------------
+
+    //TEAN AND ADULT & IMMERSION
+    .pad {
+        padding: 0rem;
+    }
+
 }

@@ -32,14 +32,14 @@ class ModTeenAdult extends React.Component {
                                     </Row>
                                     <Row className="justify-content-md-center">
                                     <Col sm="4" className="text-center">
-                                            <h6 className="h-blue"><strong>Quem se encaixa nesse grupo?</strong></h6>
+                                            <h6 className="h-pink"><strong>Quem se encaixa nesse grupo?</strong></h6>
                                             <p className="p-short">
                                                 Jovens a partir de 17 anos e adultos de qualquer idade. Bem como pessoas que possuam ou não algum 
                                                 conhecimento no idioma.
                                             </p>
                                         </Col>
                                         <Col sm="4" className="text-center">
-                                            <h6 className="h-blue"><strong>Porque fazer?</strong></h6>
+                                            <h6 className="h-pink"><strong>Porque fazer?</strong></h6>
                                             <p className="p-short">
                                                 Aprender inglês online aqui na nossa plataforma é tão cativante que, quando você perceber, 
                                                 já está falando o novo idioma com os amigos.
