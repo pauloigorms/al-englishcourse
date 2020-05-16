@@ -17,11 +17,13 @@ class News extends React.Component {
     }
 
     handleSubmit(event) {
+        event.preventDefault()
         const data = {
             name: event.target.elements.nome.value, 
             email: event.target.elements.email.value
         }
         axios.post(EXTERNAL_URL+'/news', data)
+        window.location.replace('/')
     }
 
     render() {

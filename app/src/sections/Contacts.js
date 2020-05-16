@@ -23,6 +23,7 @@ class Contacts extends React.Component {
     }
 
     handleSubmit(event) {
+        event.preventDefault()
         const data = {
             emissor: event.target.elements.nome.value, 
             telefone: event.target.elements.telefone.value, 
@@ -32,6 +33,7 @@ class Contacts extends React.Component {
             mensagem: event.target.elements.mensagem.value
         }
         axios.post(EXTERNAL_URL+'/mail', data)
+        window.location.reload()
     }
 
     render() {
