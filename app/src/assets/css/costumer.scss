@@ -17,6 +17,12 @@
   border-radius: 50px;
 }
 
+img { max-width: 100%; }
+
+.mob-active {
+  display: none;
+}
+
 body {
   background-color: var(--txt-color-dark);
 }
@@ -25,7 +31,7 @@ body {
   border-radius: 20px;
   overflow: hidden;
   z-index: 1;
-  width: 720px; 
+  width: auto; 
   height: auto;
 }
 
@@ -185,7 +191,7 @@ label {
 
 .img-contact {
   height: 15rem;
-  opacity: 5%;
+  opacity: 10%;
   position: absolute;
 }
 
@@ -619,7 +625,6 @@ h1, h2, h3, h4, h5, h6 {
 .pad {
   padding: 5rem;
 }
-
 
 .contact-around-btn-1 {
   height: 50px;

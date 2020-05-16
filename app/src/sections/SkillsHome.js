@@ -10,19 +10,19 @@ const SkillsHome = () => {
     return(
         <>
             <Row className="mt-5 mb-4">
-                <Col sm="3" className="text-center">
+                <Col sm="3" className="text-center mob-mt-2">
                     <img src={teacher} className="img-skill-home img-color-siano mb-1" alt="ícone de explicação da primeira habilidades" />
                     <h4>Professores preparados</h4>
                 </Col>
-                <Col sm="3" className="text-center">
+                <Col sm="3" className="text-center mob-mt-2">
                     <img src={chat} className="img-skill-home img-color-siano mb-1" alt="ícone de explicação da segunda habilidades" />
                     <h4>Aulas de vocabulário e gramática</h4>
                 </Col>
-                <Col sm="3" className="text-center">
+                <Col sm="3" className="text-center mob-mt-2">
                     <img src={exam} className="img-skill-home img-color-siano mb-1" alt="ícone de explicação da terceira habilidades" />
                     <h4>Exercícios de fixação</h4>
                 </Col>
-                <Col sm="3" className="text-center">
+                <Col sm="3" className="text-center mob-mt-2">
                     <img src={certifie} className="img-skill-home img-color-siano mb-1" alt="ícone de explicação da quarta habilidades" />
                     <h4>Certificado de conclusão de curso</h4>
                 </Col>

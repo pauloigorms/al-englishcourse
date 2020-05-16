@@ -23,35 +23,33 @@ class ModTeenAdult extends React.Component {
                                         </Col>
                                         <Col sm="8" className="text-center">
                                             <p className="p-minium">
-                                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s, is simply dummy text of the printing and typesetting industry. 
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                                O <i>Teen and Adult</i> tem aulas e professores que objetivam a estimulação atravás da conversação, 
+                                                de forma clara e objetiva. O mundo de hoje globalizado nos faz perceber que sem o inglês as coisas ficam 
+                                                cada vez mais difíceis. O A&L criou e desenvolveu este curso para atingir o máximo de pessoas com disciplina e qualidade. 
+                                                Dê o primeiro passo para aprender um novo idioma e venha se aventurar no maravilhoso mundo bilíngue.
                                             </p>
                                         </Col>
                                     </Row>
                                     <Row className="justify-content-md-center">
-                                        <Col sm="4" className="text-center">
-                                            <h6 className="h-pink"><strong>Quem se encaixa nesse grupo?</strong></h6>
+                                    <Col sm="4" className="text-center">
+                                            <h6 className="h-blue"><strong>Quem se encaixa nesse grupo?</strong></h6>
                                             <p className="p-short">
-                                                Simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever
-                                                since the 1500s, is simply dummy text of the printing and typesetting.
+                                                Jovens a partir de 17 anos e adultos de qualquer idade. Bem como pessoas que possuam ou não algum 
+                                                conhecimento no idioma.
                                             </p>
                                         </Col>
                                         <Col sm="4" className="text-center">
-                                            <h6 className="h-pink"><strong>Porque fazer?</strong></h6>
+                                            <h6 className="h-blue"><strong>Porque fazer?</strong></h6>
                                             <p className="p-short">
-                                                Simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever
-                                                since the 1500s, is simply dummy text of the printing and typesetting.
+                                                Aprender inglês online aqui na nossa plataforma é tão cativante que, quando você perceber, 
+                                                já está falando o novo idioma com os amigos.
                                             </p>
                                         </Col>
                                         <Col sm="4" className="text-center">
                                             <h6 className="h-pink"><strong>Inscreva-se</strong></h6>
                                             <p className="p-short">
-                                                As inscrições são realizadas em 
-                                                pessoalmente em qualquer
-                                                unidade ou via site.
+                                                As inscrições são realizadas 
+                                                somente online, é fácil, basta clicar no link a baixo, preencher os dados e pronto!
                                             </p>
                                             <a href={'https://www.hotmart.com/product/a-l-english-course/R29374053W'} target={'_blank'} rel="noopener noreferrer">
                                                 <Button variant="light" className="btn-pink"><b>FAZER MATRÍCULA</b></Button>{' '}

@@ -8,6 +8,7 @@ import Routes from './Routes.js'
 import 'normalize.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/css/costumer.scss'
+import './assets/css/mobile-costumer.scss'
 
 // const baseUrl = document.getElementsByTagName('base')[0]
 const rootElement = document.getElementById('root')

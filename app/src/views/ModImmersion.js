@@ -23,9 +23,11 @@ class ModImmersion extends React.Component {
                                         </Col>
                                         <Col sm="8" className="text-center">
                                             <p className="p-minium">
-                                                Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s, is simply dummy text of the printing and typesetting industry. 
-                                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                                Com o <i>Immersion English</i> você pode imegir em inglês em situações diárias e aplicar a nossa 
+                                                metodologia para aprofundar seus conhecimentos. Você pode levar para todos os ambientes que tiver 
+                                                interesse, além disso, vivendo dentro do mundo da língua inglesa você pode desenvolver habilidades para 
+                                                uma comunicação efetiva no mercado profissional, na vida social e pessoal. Prepara-se para ser confundido 
+                                                com um nativo norte-americano :)
                                             </p>
                                         </Col>
                                     </Row>
@@ -33,25 +35,21 @@ class ModImmersion extends React.Component {
                                         <Col sm="4" className="text-center">
                                             <h6 className="h-blue"><strong>Quem se encaixa nesse grupo?</strong></h6>
                                             <p className="p-short">
-                                                Simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever
-                                                since the 1500s, is simply dummy text of the printing and typesetting.
+                                                Qualquer pessoa que deseje imergir completamente à língua inglesa.
                                             </p>
                                         </Col>
                                         <Col sm="4" className="text-center">
                                             <h6 className="h-blue"><strong>Porque fazer?</strong></h6>
                                             <p className="p-short">
-                                                Simply dummy text of the printing and typesetting industry.
-                                                Lorem Ipsum has been the industry's standard dummy text ever
-                                                since the 1500s, is simply dummy text of the printing and typesetting.
+                                                Nossa metodologia é super flexível e acompanhará você diariamente durante todo o processo 
+                                                de evolução. Assim você ganhará confiança elevando seu domínio sobre o idioma.
                                             </p>
                                         </Col>
                                         <Col sm="4" className="text-center">
                                             <h6 className="h-blue"><strong>Inscreva-se</strong></h6>
                                             <p className="p-short">
-                                                As inscrições são realizadas em 
-                                                pessoalmente em qualquer
-                                                unidade ou via site.
+                                                As inscrições são realizadas 
+                                                somente online, é fácil, basta clicar no link a baixo, preencher os dados e pronto!
                                             </p>
                                             <a href={'https://www.hotmart.com/product/a-l-english-course/R29374053W'} target={'_blank'} rel="noopener noreferrer">
                                                 <Button variant="light" className="btn-blue"><b>FAZER MATRÍCULA</b></Button>{' '}

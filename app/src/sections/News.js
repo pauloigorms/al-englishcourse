@@ -27,7 +27,7 @@ class News extends React.Component {
     render() {
         return (
             <>
-            <section className="mt-5 mb-5">
+            <section className="">
                 <Row className="mt-5 justify-content-center">
                     <Col sm="11" className=" mb-5">
                         <Card className="card-ciano card-radius-35 card-no-border">
@@ -90,7 +90,7 @@ class News extends React.Component {
                         </p>
                         <br />
                         <a href={'https://pay.hotmart.com/R29374053W?checkoutMode=0&bid=1589338420462'} target={'_blank'} rel="noopener noreferrer"  className="no-decorer">
-                            <Button variant="light" className="btn-default"><b>QUERO SER UM ALUNO</b></Button>{' '}
+                            <Button variant="light" className="center-btn btn-default"><b>QUERO SER ALUNO</b></Button>{' '}
                         </a>
                     </Col>
                 </Row>

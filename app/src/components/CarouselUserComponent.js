@@ -10,7 +10,7 @@ export default class CarouselUserComponent extends React.Component {
     render() {
         return (
             <>
-            <section className="mt-5 mb-5">
+            <section className="">
                 <Row>
                     <Col sm="12">
                         <h3>
@@ -23,13 +23,13 @@ export default class CarouselUserComponent extends React.Component {
                     <Carousel>
                         <Carousel.Item> 
                             <Row>
-                                <Col sm="3" className="mt-5">
-                                    <h1 className="h-ciano h-resize">
+                                <Col sm="3" className="text-center">
+                                    <h1 className="h-ciano h-resize mob-mt-6">
                                         01
                                     </h1>
                                     <h3>
-                                    Acesse a <a className="no-decorer a-ciano" target={'_blank'} rel="noopener noreferrer" href={'https://pay.hotmart.com/R29374053W?checkoutMode=0&bid=1589338420462'}>plataforma aqui.</a> <br />
-                                    adicione seu nome e um e-mail, depois é só clicar em "próximo"
+                                        Acesse a <a className="no-decorer a-ciano" target={'_blank'} rel="noopener noreferrer" href={'https://pay.hotmart.com/R29374053W?checkoutMode=0&bid=1589338420462'}>plataforma aqui.</a> <br />
+                                        adicione seu nome e um e-mail, depois é só clicar em "próximo"
                                     </h3>
                                 </Col>
                                 <Col sm="9">                                                        
@@ -44,8 +44,8 @@ export default class CarouselUserComponent extends React.Component {
             
                         <Carousel.Item> 
                             <Row>
-                                <Col sm="3" className="mt-5">
-                                    <h1 className="h-ciano h-resize">
+                                <Col sm="3" className="text-center">
+                                    <h1 className="h-ciano h-resize mob-mt-6">
                                         02
                                     </h1>
                                     <h3>

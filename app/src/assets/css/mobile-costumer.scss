@@ -1,0 +1,148 @@
+@media (max-width: 720px) {
+
+    // MENU NAV
+    .web-active {
+        display: none;
+    }
+    .mob-active {
+        display: inline;
+    }
+    .img-logo-menu {
+        height: 3rem;
+        width: auto;
+    }
+    .mob-margin-top {
+        margin-top: -3rem
+    }
+    .btn-primary {
+        border-color: whitesmoke !important;
+    }
+    .mob-mt-2 {
+        margin-top: 2rem;
+    }
+
+    // BANNER HOME
+    .player {
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 1;
+        width: auto; 
+        height: auto;
+    }
+    
+    // SKILLS
+    h4 {
+        font-size: 20px;
+    }
+
+    // HOME
+    .img-skill-home {
+        height: 2.5rem;
+    }
+    .big-contact-around {
+        height: 60px;
+        width: auto;
+        border-radius: 50px 0% 0% 50px;
+        background-color: #00E1E1;
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+        padding-top: 0.5rem;
+        margin-top: 40rem;
+    }
+    .mob-h2 {
+        font-size: 20px;
+    }
+
+    // CONTATO
+    .img-contact {
+        height: 8rem;
+        opacity: 10%;
+        position: absolute;
+    }
+    .img-contact-position-15 {
+        margin-top: -17rem;
+        margin-left: 10rem;
+    }      
+    .img-contact-position-25 {
+        margin-top: 25rem;
+        margin-left: 0rem;
+    }      
+    .img-contact-position-45 {
+        margin-top: 20rem;
+        margin-left: 10rem;
+    }
+
+    // MODALIDADES
+    .img-insight {
+        height: 20rem;
+        opacity: 8%;
+        position: absolute;
+        margin-left: 0rem;
+    }
+    .img-menu-category {
+        height: 1rem;
+    }
+    .mob-p-title {
+        font-size: 15px;
+    }
+    .mob-p-desc {
+        font-size: 12px !important;
+    }
+    .card-radius-left-35 {
+        border-radius: 15px 0px 0px 15px !important;  
+    }
+    .card-radius-rigth-35 {
+        border-radius: 0px 15px 15px 0px !important;
+      }
+    .card-no-border {
+        border-color: transparent !important;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .mob-resize-card {
+        width: 10rem !important;
+    }
+    
+    // PROFESSORES & ESTUDANTES
+    .mob-resize-carousel {
+        padding: 10px !important;
+    }
+    .carousel-control-prev, 
+    .carousel-control-next {
+        width: 3.5% !important;
+    }
+    .carousel-control-prev {
+        margin-left: 40% !important;
+        margin-top: -105% !important;
+    }
+    
+    .carousel-control-next {
+        margin-right: 40% !important;
+        margin-top: -105% !important;
+    }
+    .img-quotation {
+        height: 2rem;
+        transform: rotate(180deg);
+    }
+
+    // MATRICULAR PLATAFORMA
+    .h-resize {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .mob-mt-6 {
+        margin-top: 6rem;
+    }
+      
+
+    // FOOTER
+    .mt-mob-5 {
+        margin-top: 1% !important;
+    }
+    .center-btn {
+        display: flex;
+        justify-content: center;
+    }
+    .mob-text-center {
+        text-align: center !important;
+    }
+}

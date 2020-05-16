@@ -23,13 +23,12 @@ class Contacts extends React.Component {
             mensagem: event.target.elements.mensagem.value
         }
         axios.post(EXTERNAL_URL+'/mail', data)
-          .then(res => { })
     }
 
     render() {
         return (
             <>
-            <section className="mt-5 mb-5">
+            <section className="mt-5">
                 <Row>
                     <Col sm="12">
                     <Card className="card-gray card-padding-inter">

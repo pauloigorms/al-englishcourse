@@ -13,7 +13,7 @@ import medal from './../assets/img/icons/medal.svg'
 const Home = () => {
     return (
         <>
-            <section className="mt-5 mb-5">
+            <section className="">
 
                 <Row className="mt-5 mb-5">
                     <Col sm="8">
@@ -25,7 +25,7 @@ const Home = () => {
                 </Row>
 
                 <div className="contact-fixed">
-                <BigFlutuButton />
+                    <BigFlutuButton />
                 </div>
 
                 <Row className="mt-5 mb-5">
@@ -38,7 +38,7 @@ const Home = () => {
                 </Row>
 
                 <Row className="mt-5 mb-5">
-                    <Col sm="4" className="text-left">
+                    <Col sm="4" className="text-left mob-text-center">
                         <img src={hour} className="img-skill-home img-color-siano mb-1" alt="ícone de explicação da primeira habilidades" />
                         <h6>Qualquer hora do dia</h6>
                         <p className="p-white">
@@ -46,14 +46,14 @@ const Home = () => {
                             A facilidade em aprender agora lhe acompanha 24h por dia!
                         </p>
                     </Col>
-                    <Col sm="4" className="text-left">
+                    <Col sm="4" className="text-left mob-text-center">
                         <img src={respect} className="img-skill-home img-color-siano mb-1" alt="ícone de explicação da segunda habilidades" />
                         <h6>Respeitamos o seu ritmo</h6>
                         <p className="p-white">
                             Repita as aulas quantas vezes vocês achar necessário. O importante é você aprender respeitando seu tempo e seu ritmo!
                         </p>
                     </Col>
-                    <Col sm="4" className="text-left">
+                    <Col sm="4" className="text-left mob-text-center">
                         <img src={medal} className="img-skill-home img-color-siano mb-1" alt="ícone de explicação da terceira habilidades" />
                         <h6>Montamos o melhor time para atende-lo</h6>
                         <p className="p-white">
