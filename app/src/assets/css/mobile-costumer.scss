@@ -55,7 +55,7 @@
     // CONTATO
     .img-contact {
         height: 8rem;
-        opacity: 20%;
+        opacity: 10%;
         position: absolute;
     }
     .img-contact-position-15 {
@@ -74,7 +74,7 @@
     // MODALIDADES
     .img-insight {
         height: 20rem;
-        opacity: 15%;
+        opacity: 8%;
         position: absolute;
         margin-left: 0rem;
     }
@@ -123,6 +123,26 @@
         height: 2rem;
         transform: rotate(180deg);
     }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li {
+        float: left;
+        margin-right: 5px;
+    }
+    .img-teacher-carousel-show {
+        height: 7rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+        box-shadow: 0 40px 80px 0 rgba(180, 180, 180, 0.2);
+    }
+    .mob-pad-teacher {
+        padding: 0px !important
+    }
+           
 
     // MATRICULAR PLATAFORMA
     .h-resize {
@@ -190,7 +210,6 @@
         padding-top: .5rem;
         cursor: -webkit-grab; cursor: grab;
     }
-
 
     // -----------------------------------------------
 
