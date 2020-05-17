@@ -64,7 +64,7 @@ class News extends React.Component {
                     <Col sm="12" className="mt-5 mb-5">
                         <div className="text-center">
                             <h2>
-                            <strong>Pra quem é nossos cursos</strong>
+                            <strong>Pra quem são nossos cursos</strong>
                             <span className="h-span">?</span>
                             </h2>                
                             <p className="p-white p-medium">

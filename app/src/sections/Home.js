@@ -18,7 +18,7 @@ const Home = () => {
                 <Row className="mt-5 mb-5">
                     <Col sm="8">
                         <h6>
-                            Nosso objetivo é transmitir conhecimento para alunos de língua inglesa que possuem ou não algum domínio no idioma. Nosso curso será disponibilizado em uma plataforma online com acesso ilimitado aos conteúdos. Todos interessados em aprender a língua inglesa ou que já possuem algum conhecimento e desejam reforçá-lo serão bem vindos.
+                            Nosso objetivo é transmitir conhecimento para alunos de língua inglesa que possuem ou não algum domínio no idioma. O curso será disponibilizado em uma plataforma online com acesso ilimitado aos conteúdos. Todos interessados em aprender a língua inglesa ou que já possuem algum conhecimento e desejam reforçá-lo serão bem vindos.
                         </h6>
                     </Col>
                 </Row>
