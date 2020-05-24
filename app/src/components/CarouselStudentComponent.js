@@ -5,9 +5,7 @@ import { Row, Col, Card } from 'react-bootstrap'
 
 // ultis
 import { convertToList, EXTERNAL_URL } from './../Utils.js'
-
 import quotation from './../assets/img/icons/quotation.svg'
-import user from './../assets/img/perfil/user.png'
 
 export default class CarouselStudentComponent extends React.Component {
     
@@ -67,7 +65,7 @@ export default class CarouselStudentComponent extends React.Component {
                                                     &ensp;
                                                     <img
                                                         className="img-student-carousel"
-                                                        src={user}
+                                                        src={require("./../assets/img/perfil/student/" + comment.pic)}
                                                         alt="Foto de perfil"
                                                     />
                                                 </h6>                                
@@ -112,7 +110,7 @@ export default class CarouselStudentComponent extends React.Component {
                                                 &ensp;
                                                 <img
                                                     className="img-student-carousel"
-                                                    src={user}
+                                                    src={require("./../assets/img/perfil/student/" + comment.pic)}
                                                     alt="Foto de perfil"
                                                 />
                                             </h6>                                

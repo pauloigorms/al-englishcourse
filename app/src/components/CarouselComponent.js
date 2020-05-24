@@ -10,9 +10,6 @@ import ModalComponent from './../components/ModalComponent'
 // ultis
 import { FormatText, convertToList, EXTERNAL_URL } from './../Utils.js'
 
-// Images
-import user from './../assets/img/perfil/user.png'
-
 class CarouselComponent extends React.Component {
 
   constructor(props) {
@@ -37,18 +34,20 @@ class CarouselComponent extends React.Component {
           <div className="web-active">
             <Carousel>
               {
-                this.state.m__teachers.length ?
+                this.state.m__teachers.length ?                
                 this.state.m__teachers.map(
                   (teachers, i) =>
-                    <Carousel.Item key={i}>
+                    <Carousel.Item key={i}>                      
                       <Row>
                         {
                           teachers.map(
                             teacher => 
+                            
                             <Col key={teacher._id} sm="3" className="teacher-select">
+                              {console.log(teacher)}
                             <Image
                                 className="d-block img-teacher-carousel mt-3"
-                                src={user}
+                                src={require("./../assets/img/perfil/teacher/" + teacher.pic)}
                                 alt="Foto de perfil"
                             />
                             <h5>{ (teacher.name).toUpperCase() }</h5>
@@ -90,7 +89,7 @@ class CarouselComponent extends React.Component {
                             <Col sm="12" className="teacher-select">
                               <Image
                                   className="d-block img-teacher-carousel"
-                                  src={user}
+                                  src={require("./../assets/img/perfil/teacher/" + teacher.pic)}
                                   alt="Foto de perfil"
                               />
                               <h5>{ (teacher.name).toUpperCase() }</h5>

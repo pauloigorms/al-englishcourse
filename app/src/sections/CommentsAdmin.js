@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import fs from 'fs'
 import { EXTERNAL_URL } from './../Utils.js'
 import { getToken } from './../services/api'
 import {
@@ -28,6 +29,8 @@ class CommentsAdmin extends React.Component {
         this.handleAlertShow = this.handleAlertShow.bind(this)
         this.handleAlertAgree = this.handleAlertAgree.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+
+        this.fileSelectHandler = this.fileSelectHandler.bind(this)
         this.state = {
             comments: [],
             setShow: false,
@@ -36,6 +39,9 @@ class CommentsAdmin extends React.Component {
             showAlert: false,
             statusSend: false,
             loading: false,
+            image_type: {
+                type: null
+            },
             config: {
                 headers: {
                   'Authorization': 'Bearer ' + getToken()
@@ -119,16 +125,22 @@ class CommentsAdmin extends React.Component {
         })
     }
 
+    fileSelectHandler(event) {
+        this.setState({image_type:event.target.files[0]})
+        console.log(event.target.files[0])
+    }
+
     handleSubmit(event) {
         this.setState({ statusSend: false,  loading: true })
         event.preventDefault()
         const data = {
             name: event.target.elements.name.value,
-            pic: "./../assets/img/perfil/student/3.jpg",
+            pic: this.state.image_type.type,
             living: event.target.elements.living.value,
             comment: event.target.elements.comment.value,
             status: this.state.status ? true : false
         }
+        // this.state.image_type.file.mv("./../assets/img/perfil/student/" + "image_type.png")
         if(this.state.id) { 
             axios.put(EXTERNAL_URL+'/adm/comments/'+this.state.id, data, this.state.config)
             .then(() => { 
@@ -154,15 +166,16 @@ class CommentsAdmin extends React.Component {
                     statusSend: false,
                     loading: false
                 })
+                
             })
-            .catch(() => {
+            .catch((e) => {
                 this.setState({
                     statusSend: true,
                     loading: false
                 })
+                console.log(e)
             })
-        }   
-        
+        }
     }
 
     render() {
@@ -247,7 +260,7 @@ class CommentsAdmin extends React.Component {
                     </Row>
                     
                     <Modal show={this.state.show} onHide={this.handleClose} size="lg">
-                        <Form  onSubmit={this.handleSubmit}>
+                        <Form  onSubmit={this.handleSubmit} encType='multipart/form-data'>
                             <Modal.Header closeButton>
                             <Modal.Title>NOVO COMENTÁRIO</Modal.Title>
                             </Modal.Header>
@@ -287,10 +300,10 @@ class CommentsAdmin extends React.Component {
                                                     onChange={e => this.setState({comment:e.target.value})} />
                                             </Form.Group>
                                         </Col>
-                                        <Col sm="10">
+                                        <Col sm="10">                                            
                                             <Form.File id="img_comment">
                                                 <Form.File.Label className="p-minium p-gray">Carregar imagem</Form.File.Label>
-                                                <Form.File.Input />
+                                                <Form.File.Input onChange={this.fileSelectHandler} />
                                             </Form.File>
                                         </Col>
                                     </Row>                                 

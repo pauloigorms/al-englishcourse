@@ -3,9 +3,6 @@ import { Container, Row, Col, Button, Modal } from 'react-bootstrap'
 import { FaRegNewspaper, FaFacebookF, FaInstagram, FaLaptop } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
-// Images
-import user from './../assets/img/perfil/user.png'
-
 class ModalComponent extends React.Component {
 
     constructor(props) {
@@ -46,7 +43,7 @@ class ModalComponent extends React.Component {
                                 <Col sm="3">
                                     <img
                                         className="img-teacher-carousel-show"
-                                        src={user}
+                                        src={require("./../assets/img/perfil/teacher/" + this.props.pic)}
                                         alt="Foto de perfil"
                                     />
                                 </Col>
@@ -118,7 +115,7 @@ class ModalComponent extends React.Component {
                                 <Col sm="3">
                                     <img
                                         className="img-teacher-carousel-show"
-                                        src={user}
+                                        src={require("./../assets/img/perfil/teacher/" + this.props.pic)}
                                         alt="Foto de perfil"
                                     />
                                 </Col>
