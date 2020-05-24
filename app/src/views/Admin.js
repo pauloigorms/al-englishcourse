@@ -24,7 +24,7 @@ class Admin extends React.Component {
                         <Col sm="12" className="text-center">
                             <Card>
                                 <Card.Body>
-                                    <div className="text-right">
+                                    <div className="text-right mt-2 mb-3">
                                         <Button variant="outline-danger" onClick={this.Logout}>Logout</Button>
                                     </div>
                                     <Tabs defaultActiveKey="professor" id="uncontrolled-tab-example">

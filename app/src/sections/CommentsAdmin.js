@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios'
-import fs from 'fs'
 import { EXTERNAL_URL } from './../Utils.js'
 import { getToken } from './../services/api'
 import {
@@ -140,7 +139,6 @@ class CommentsAdmin extends React.Component {
             comment: event.target.elements.comment.value,
             status: this.state.status ? true : false
         }
-        // this.state.image_type.file.mv("./../assets/img/perfil/student/" + "image_type.png")
         if(this.state.id) { 
             axios.put(EXTERNAL_URL+'/adm/comments/'+this.state.id, data, this.state.config)
             .then(() => { 
@@ -196,7 +194,7 @@ class CommentsAdmin extends React.Component {
                             </Button>
                         </Col>
                         <Col sm="12">
-                            <Table striped bordered hover>
+                            <Table responsive striped bordered hover>
                                 <thead>
                                     <tr>
                                         <th>#</th>

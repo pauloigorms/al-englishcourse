@@ -29,6 +29,7 @@ class TeachersAdmin extends React.Component {
         this.handleAlertAgree = this.handleAlertAgree.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleClick = this.handleClick.bind(this)
+        this.fileSelectHandler = this.fileSelectHandler.bind(this)
         this.state = {
             teachers: [],
             setShow: false,
@@ -37,6 +38,9 @@ class TeachersAdmin extends React.Component {
             showAlert: false,
             statusSend: false,
             loading: false,
+            image_type: {
+                type: null
+            },
             config: {
                 headers: {
                   'Authorization': 'Bearer ' + getToken()
@@ -142,13 +146,18 @@ class TeachersAdmin extends React.Component {
         })
         this.handleShow()      
     }
+
+    fileSelectHandler(event) {
+        this.setState({image_type:event.target.files[0]})
+        console.log(event.target.files[0])
+    }
     
     handleSubmit(event) {
         this.setState({ statusSend: false,  loading: true })
         event.preventDefault()
         const data = {
             name: event.target.elements.name.value,
-            pic: "./../assets/img/perfil/student/3.jpg",
+            pic: this.state.image_type.type,
             living: event.target.elements.living.value,
             phone: event.target.elements.phone.value,
             email: event.target.elements.email.value,
@@ -213,7 +222,7 @@ class TeachersAdmin extends React.Component {
                             </Button>
                         </Col>
                         <Col sm="12">
-                            <Table striped bordered hover>
+                            <Table responsive striped bordered hover>
                                 <thead>
                                     <tr>
                                         <th>#</th>
@@ -277,7 +286,7 @@ class TeachersAdmin extends React.Component {
                         </Col>
                     </Row>
                     <Modal show={this.state.show} onHide={this.handleClose} size="lg">
-                        <Form  onSubmit={this.handleSubmit}>
+                        <Form onSubmit={this.handleSubmit}>
                             <Modal.Header closeButton>
                             <Modal.Title>CADASTRAR PROFESSOR</Modal.Title>
                             </Modal.Header>
@@ -409,7 +418,7 @@ class TeachersAdmin extends React.Component {
                                         <Col sm="10">
                                             <Form.File id="img_teacher">
                                                 <Form.File.Label className="p-minium p-gray">Carregar imagem</Form.File.Label>
-                                                <Form.File.Input />
+                                                <Form.File.Input onChange={this.fileSelectHandler} />
                                             </Form.File>
                                         </Col>
                                     </Row>                                 

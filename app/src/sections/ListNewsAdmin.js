@@ -47,7 +47,7 @@ class ListNewsAdmin extends React.Component {
                 <Container fluid>
                     <Row className="mt-5">
                         <Col sm="12">
-                            <Table striped bordered hover>
+                            <Table responsive striped bordered hover>
                                 <thead>
                                     <tr>
                                         <th>#</th>
