@@ -6,3 +6,6 @@ export async function get__teachers() {
         .then(res => { return res.data })
     console.log(response)
 }
+
+export const getToken = () => JSON.parse(Buffer.from(localStorage.getItem('user'), "base64").toString("ascii")).token
+export const isLogged = () => !!localStorage.getItem('user') ? true : false

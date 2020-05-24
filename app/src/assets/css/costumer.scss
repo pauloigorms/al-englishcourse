@@ -56,11 +56,12 @@ body {
   text-decoration: none !important;
 }
 
+.p-gray {
+  color: #707070 !important;
+}
+
 p {
   font-family: 'Trebuchet MS';
-  &.p-gray {
-    color: #707070 !important;
-  }
   &.p-white {
     color: whitesmoke !important;
   }
@@ -647,4 +648,77 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding-top: 8px;
   box-shadow: 0 40px 80px 0 rgba(180, 180, 180, 0.2);
+}
+
+
+// LOGIN
+
+.card-login {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.loader-panel-item {
+	border: 5px solid #f3f3f3;
+	border-top: 5px solid #272727;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	animation: spin 2s linear infinite;
+}
+.fc-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.container-admin {
+  padding: 2rem 1rem
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: left;
+  margin-right: 5px;
+}
+
+.input-adm {
+  border-radius: 10px !important;
+  background-color: transparent !important;
+  color: var(--txt--color-ciano) !important;
+}
+
+.input-adm::placeholder {
+  color: gray !important;
+}
+
+.input-adm-textarea {
+  border-radius: 10px !important;
+  background-color: transparent !important;
+  color: var(--txt--color-ciano) !important;
+}
+
+.input-contact-textarea::placeholder {
+  color: gray !important;
+}
+
+.hand-mouse {
+  cursor: -webkit-grab; cursor: grab;
 }

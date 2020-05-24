@@ -20,10 +20,12 @@ class News extends React.Component {
         event.preventDefault()
         const data = {
             name: event.target.elements.nome.value, 
-            email: event.target.elements.email.value
+            email: event.target.elements.email.value,
+            date_register: new Date()
         }
         axios.post(EXTERNAL_URL+'/news', data)
-        window.location.replace('/')
+            .then(() => window.location.replace('/'))
+            .catch((e) => console.log(e))
     }
 
     render() {
