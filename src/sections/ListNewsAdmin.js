@@ -28,7 +28,7 @@ class ListNewsAdmin extends React.Component {
     }
 
     updateData() {
-        axios.get(EXTERNAL_URL+'/adm/list-news', this.state.config)
+        axios.get(EXTERNAL_URL+'/list-news', this.state.config)
           .then(res => { this.setState({ listNews: res.data }) })
     }
 
@@ -37,7 +37,7 @@ class ListNewsAdmin extends React.Component {
     }
 
     handleClick(id) {
-        axios.delete(EXTERNAL_URL+'/adm/list-news/' + id, this.state.config)
+        axios.delete(EXTERNAL_URL+'/list-news/' + id, this.state.config)
             .then(() => { this.updateData() })
     }
 

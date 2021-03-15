@@ -44,7 +44,6 @@ class CarouselComponent extends React.Component {
                             teacher => 
                             
                             <Col key={teacher._id} sm="3" className="teacher-select">
-                              {console.log(teacher)}
                             <Image
                                 className="d-block img-teacher-carousel mt-3"
                                 src={require("./../assets/img/perfil/teacher/" + teacher.pic)}

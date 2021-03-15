@@ -20,8 +20,6 @@ class LearnUser extends React.Component {
 
 	handleShow() {
         this.setState({ show: false ? true : false })
-        
-        console.log(this.state.show)
 	}
 
     render() {

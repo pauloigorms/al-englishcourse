@@ -56,7 +56,7 @@ class CommentsAdmin extends React.Component {
     }
 
     updateData() {
-        axios.get(EXTERNAL_URL+'/adm/comments', this.state.config)
+        axios.get(EXTERNAL_URL+'/comments', this.state.config)
           .then(res => { this.setState({ comments: res.data }) })
     }
 
@@ -65,7 +65,7 @@ class CommentsAdmin extends React.Component {
     }    
 
     toggleEnabled(e) {
-        axios.put(EXTERNAL_URL+'/adm/comments/' + e.target.id, {"status": e.target.checked}, this.state.config)
+        axios.put(EXTERNAL_URL+'/comments/' + e.target.id, {"status": e.target.checked}, this.state.config)
             .then(() => { this.updateData() })
     }
 
@@ -99,7 +99,7 @@ class CommentsAdmin extends React.Component {
     }
 
     handleAlertAgree() {
-        axios.delete(EXTERNAL_URL+'/adm/comments/' + this.state.comment_id, this.state.config)
+        axios.delete(EXTERNAL_URL+'/comments/' + this.state.comment_id, this.state.config)
             .then(() => { 
                 this.updateData()
                 this.handleAlertClose()
@@ -126,7 +126,6 @@ class CommentsAdmin extends React.Component {
 
     fileSelectHandler(event) {
         this.setState({image_type:event.target.files[0]})
-        console.log(event.target.files[0])
     }
 
     handleSubmit(event) {
@@ -140,7 +139,7 @@ class CommentsAdmin extends React.Component {
             status: this.state.status ? true : false
         }
         if(this.state.id) { 
-            axios.put(EXTERNAL_URL+'/adm/comments/'+this.state.id, data, this.state.config)
+            axios.put(EXTERNAL_URL+'/comments/'+this.state.id, data, this.state.config)
             .then(() => { 
                 this.updateData() 
                 this.handleClose()
@@ -156,7 +155,7 @@ class CommentsAdmin extends React.Component {
                 })
             })
         } else {
-            axios.post(EXTERNAL_URL+'/adm/comments', data, this.state.config)
+            axios.post(EXTERNAL_URL+'/comments', data, this.state.config)
             .then(() => { 
                 this.updateData() 
                 this.handleClose()
